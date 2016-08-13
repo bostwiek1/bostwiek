@@ -1,0 +1,336 @@
+
+/*=== Fonts ===*/
+/*
+Pompiere (uppercase)
+Fredericka the Great (not nav)
+
+Lakki Reddy (uppercase)
+Pacifico (lower/camel)
+Patrick Hand (uppercase)
+
+Vibur
+
+*/
+
+/*=== DOMjects ===*/
+
+* {margin: 0; padding: 0; color: #fff;}
+
+body {
+	background: url(../images/bg/bg_face1.jpg) center center fixed;
+	background-size: cover;
+	font-family: 'Lakki Reddy', sans-serif;
+	font-size: 13px; color: #fff;
+}
+
+h1 {
+	text-align: center; font-size: 3em; font-weight: normal;
+	margin: 0.3em auto 0;
+}
+h2 {}
+h3 {}
+
+p {font-size: 1.8em; text-align: center;}
+
+ul {display: table; margin: 0 auto; font-size: 1.4em;}
+ul li { display: block; list-style-type: none; text-align: center;}
+
+/* === GLOBAL === */
+
+.body_container {
+	min-width: 320px;
+	margin: 0 auto;	position: relative;
+}
+
+.clear {clear: both;}
+
+
+/* determines width of images */
+
+/*=== Header ===*/
+
+header {
+	width: 100%; min-width: 320px; height: 100px;
+	background: #722e3e; position: relative;
+	border-bottom: 10px solid #450101;
+}
+.logo {
+	display: block; position: absolute; left: 30px; top: 10px;
+	padding: 3px; background: #431e1e; line-height: 0px;
+	border-radius: 50px;
+}
+.logo img {
+	display: inline-block;
+	width: 70px;
+}
+.logo:hover {
+	transform: rotateZ(360deg);
+	/*animation: logoHover 4s ease-in-out infinite;*/
+}
+
+/*=== Nav ===*/
+
+nav {
+	position: absolute; bottom: 0px; left: 180px;
+	font-family: 'Lakki Reddy', sans-serif;
+	font-size: 2.4em;
+	text-transform: lowercase;
+}
+.nav-item {display: inline; text-align: center; position: relative;}
+.nav-item .nav-primary {
+	position: relative; top: 0px;
+	text-decoration: none;
+	color: #fff;
+	text-shadow: 0px 2px 4px #000;	
+	margin: 0 10px;
+}
+.nav-item:hover .nav-primary {
+	animation: navHover 0.5s ease-in-out;
+}
+
+.dropdown-container .dropdown {
+	position: absolute; left: -4px; top: 52px; z-index: 200;
+	overflow: hidden; background: #722e3e;
+	padding: 5px 20px 0px;
+	/*box-shadow: 0px 4px 4px rgba(0,0,0,0.3);*/
+	border: 4px solid #450101;
+	border-top: 0;
+
+	opacity: 0;
+
+    -webkit-transform:perspective(1000) rotate3d(1,0,0,-90deg);
+    -webkit-transform-origin:50% 0;
+}
+.dropdown-container:hover .dropdown {
+	opacity: 1;
+
+    -webkit-transform:perspective(400) rotate3d(0,0,0,0);	
+}
+
+/*
+
+	Dropdowns are a cunt
+
+	opacity overrides transform3d
+	which doesnt work in a lot of
+	browsers
+
+
+*/
+
+.dropdown .nav-dropdown {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	text-shadow: 0px 1px 4px #000;
+	white-space: nowrap;
+}
+.dropdown .nav-dropdown:hover {
+	text-shadow: 0px 2px 4px #000;
+}
+
+/* mobile nav */
+
+.nav-btn {
+	display: none;
+	border-radius: 15px;
+	background: #fff;
+	padding: 10px 20px;
+}
+
+
+
+/*=== Social ===*/
+
+.social-container {
+	position: absolute; top: 0; right: 0;
+	display: table;
+}
+
+.social-icon {
+	display: inline-block; width: 30px; height: 30px;
+	border-radius: 15px; 
+}
+
+
+/*=== Content ===*/
+
+.content {}
+
+
+/*=== Misc ===*/
+
+.gallery {}
+
+.gallery img {
+	display: inline-block; width: 100%;
+}
+
+.tiles-wrap img {
+	display: inline-block;
+}
+.tiles-wrap li {display: inline-block;}
+
+
+.text {
+	box-sizing: border-box;
+	padding: 0 3em;
+}
+
+
+.categories {
+	display: none;
+	width: 100%; min-width: 320px;
+	font-size: 1.6em;
+	background: rgba(0,0,0,0.1);
+}
+.section-container {
+	display: table; margin: 0 auto;
+	position: relative;
+}
+.section {
+	padding: 0 20px;
+	cursor: pointer;
+	line-height: 1em;
+	vertical-align: center;
+}
+
+.section:hover {background: rgba(255,255,255,0.3);}
+
+
+
+
+/*===================*/
+/*===================*/
+/*===================*/
+
+
+
+/*=== Viewports ===*/
+
+@media (min-width: 320px) {}
+
+@media (min-width: 480px) {}
+
+@media (min-width: 640px) {}
+
+@media (min-width: 768px) {
+	.nav-item .nav-primary {margin: 0 20px;}
+}
+
+@media (min-width: 980px) {
+	.nav-item .nav-primary {margin: 0 30px;}
+}
+
+@media (min-width: 1200px) {}
+
+
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 980px) {
+	.nav-item .dropdown { left: -20px; }
+}
+
+@media (max-width: 768px) {
+	.nav-item .dropdown { left: -26px; }
+}
+
+@media (max-width: 640px) {
+	body { font-size: 11px; }
+	nav { left: auto; right: 10px; }
+	.nav-item .dropdown { left: -25px; top: 40px; }
+}
+
+@media (max-width: 480px) {
+	body {font-size: 8px;}
+	header {border-top: 10px solid #722e3e;}
+	.logo {position: static; display: table; margin: 0 auto 5px;}
+	.logo img {width: 50px;}
+	nav {position: static; display: table; margin: 0 auto;}
+	.nav-item .dropdown { left: -18px; top: 35px; }
+}
+
+@media (max-width: 320px) {}
+
+
+
+
+/*=== Transitions ===*/
+
+.body_container, nav a {
+	transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+.dropdown-container .dropdown {
+
+	transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+}
+.dropdown-container .dropdown {
+	transition: opacity 0.1s linear;
+	-o-transition: opacity 0.1s linear;
+	-ms-transition: opacity 0.1s linear;
+	-moz-transition: opacity 0.1s linear;
+	-webkit-transition: opacity 0.1s linear;
+}
+.logo {
+	transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-webkit-transition: all 0.6s ease-in-out;
+}
+
+
+
+
+/* === ANIMATION === */
+
+
+@keyframes logoHover {
+	2% { transform: rotateZ(0deg); background: #431e1e; }
+	21% {background: #da9393;}
+	40% { transform: rotateZ(360deg); background: #431e1e; }
+	57% { transform: rotateZ(360deg); background: #431e1e; }
+	76% {background: #da9393;}
+	95% { transform: rotateZ(0deg); background: #431e1e; }
+}
+
+
+@keyframes navHover {
+
+	0% {text-shadow: 0 2px 4px #000; top: 0px;}
+	50% {text-shadow: 0 4px 4px #000; top: -2px;}
+	100% {text-shadow: 0 2px 4px #000; top: 0px;}
+
+}
+
+
+
+
+/* SCRAPS
+
+
+
+
+
+nav ul {}
+nav ul li {display: inline; position: relative;}
+nav ul li a {display: inline-block;}
+nav ul li a:hover {}
+
+.dropdown {
+	position: absolute; top: 0; left: 0;
+	display: none;
+}
+nav ul li:hover .dropdown {display: block;}
+
+
+*/
